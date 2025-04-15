@@ -1,7 +1,6 @@
 header {
   .header-content {
-    display: flex;
-    justify-content: space-between;
+    @include dFlex(space-between, center);
 
     .logo {
       width: 100px;
@@ -9,14 +8,11 @@ header {
     }
 
     .nav-links {
-      display: flex;
-      align-items: center;
-      column-gap: 51px;
+      @include dFlex(flex-start, center, 51px);
 
       .nav-list,
       .social-media {
-        display: flex;
-        column-gap: 63px;
+        @include dFlex(flex-start, flex-start, 63px);
       }
 
       .list-item {
